@@ -1,14 +1,15 @@
 
 import './App.css'
+import Login from './Components/Pages/Login/Login'
 
 function App() {
 
 
   return (
     <>
-      <h1 className="text-5xl font-bold underline">
-      Hello world!
-    </h1>
+   
+      <Login></Login>
+
     </>
   )
 }
