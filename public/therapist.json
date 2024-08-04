@@ -1,0 +1,31 @@
+ [
+      {
+        "id": 1,
+        "photo": "https://randomuser.me/api/portraits/men/1.jpg",
+        "name": "John Doe",
+        "location": "New York, USA",
+        "companyName": "TechCorp"
+      },
+      {
+        "id": 2,
+        "photo": "https://randomuser.me/api/portraits/women/2.jpg",
+        "name": "Jane Smith",
+        "location": "London, UK",
+        "companyName": "Innovate Ltd"
+      },
+      {
+        "id": 3,
+        "photo": "https://randomuser.me/api/portraits/men/3.jpg",
+        "name": "Robert Brown",
+        "location": "Sydney, Australia",
+        "companyName": "AussieTech"
+      },
+      {
+        "id": 4,
+        "photo": "https://randomuser.me/api/portraits/women/4.jpg",
+        "name": "Emily Davis",
+        "location": "Toronto, Canada",
+        "companyName": "MapleSoft"
+      }
+    ]
+  
