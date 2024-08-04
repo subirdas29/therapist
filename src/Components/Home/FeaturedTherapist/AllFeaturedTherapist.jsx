@@ -6,14 +6,25 @@ const AllFeaturedTherapist = ({therapist}) => {
     console.log(therapist)
 
   return (
-    <div>
+    <div className='border rounded-xl w-full'>
 
-    
+        <div className='p-[10px]'>
+            <img  src={photo} className='w-full' alt="" />
+        </div>
+       <div className='px-5 pt-2 pb-4'>
+       <div>
+            <h1>{name}</h1>
+        </div>
+        <div>
+            <p>{location}</p>
+            <p>{companyName}</p>
+        </div>
+       </div>
+        <div>
+            <button className='w-full underline rounded-b-xl py-3 bg-blue-500'>See Details</button>
+        </div>
 
-      <p>{photo}</p>
-      <p>{name}</p>
-      <p>{location}</p>
-      <p>{companyName}</p>
+      
     </div>
   )
 }

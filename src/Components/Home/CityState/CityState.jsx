@@ -3,7 +3,7 @@ import art from '../../../assets/home/cityandzipphoto/art.png'
 
 const CityState = () => {
   return (
-    <div className='flex justify-between m-[30px] rounded-lg bg-[#FFFFFF]'>
+    <div className='flex justify-between m-[30px] rounded-xl bg-[#FFFFFF]'>
         <div className='py-[30px] pl-[30px] w-1/2'>
       <h1 className='font-medium text-[20px]'>I`m Looking for Massage Therapist Near...</h1>
         <p className='leading-[22.5px] mb-[30px] mt-2'>

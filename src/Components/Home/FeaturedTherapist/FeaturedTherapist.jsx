@@ -11,12 +11,17 @@ const FeaturedTherapist = () => {
      },[])
 
   return (
-    <div>
-      <h1>Featured Therapist</h1>
+   <div>
+    <h1 className='mx-[30px] mt-[30px] mb-[18px] font-medium text-lg'>Featured Therapist</h1>
+     <div className='bg-[#FFFFFF] m-[30px] rounded-xl'>
+      
+      <div className='flex gap-6 rounded-xl  p-[30px]'>
       {
         therapists.map(therapist => <AllFeaturedTherapist key={therapist.id} therapist={therapist}></AllFeaturedTherapist>)
       }
+      </div>
     </div>
+   </div>
   )
 }
 
