@@ -28,15 +28,15 @@ const Login = () => {
         <div className='  absolute bottom-0 md:static  w-full md:w-2/5 md:mr-16 lg:mr-24'>
        
            <div>
-           <h1 className='text-[40px]  text-[#4285F3] font-poorrichard text-center md:text-left md:static top-0 '>LOGO</h1>
+           <h1 className='text-[30px] md:text-[40px]  text-[#4285F3] font-poorrichard text-center md:text-left '>LOGO</h1>
            <p className='text-[#FFFFFF] text-center mb-8 md:hidden '>
-           <span className='text-lg font-semibold'>Sign In</span> <span className='text-lg font-medium'> to view all the <br /> massage therapists</span>
+           <span className='text-[14px] font-semibold'>Sign In</span> <span className='text-[14px] font-medium'> to view all the <br /> massage therapists</span>
            </p>
            </div>
           <div className='pt-2 pb-6 bg-white rounded-t-3xl'>
           <div className='mt-[25px] mb-[40px]'>
            <p className='font-semibold text-3xl md:text-left text-center'>Log In To Your Account</p>
-           <p className='text-[16px] md:text-left text-center text-[#5C635A]  md:leading-[50px]'>Welcome Back! Select a method to log in:</p>
+           <p className='text-[14px] md:text-[16px] md:text-left text-center text-[#5C635A]  md:leading-[50px]'>Welcome Back! Select a method to log in:</p>
            </div>
            <div className='flex justify-center md:justify-between '>
            <button className='rounded-lg px-6 md:px-8 lg:px-[54px] py-3 bg-gradient-to-r from-[#E4E4E4] to-[#FFFFFF] drop-shadow-lg flex justify-center items-center mr-10 md:mr-4' > <img className='w-7 h-7' src={google} alt="" /><span>Google</span></button>
@@ -49,28 +49,38 @@ const Login = () => {
             <div >
            <div className='mb-4'>
            <p className='mb-2'>Email</p>
-           <input type="text" name="" id="" placeholder='Enter your email'  className='w-full px-4 py-2 md:py-3 rounded-lg border border-1' />
+       
+          <input type="text" name="" id=""  
+           
+            className='bg-transparent w-full px-4 py-2 md:py-3 rounded-lg border border-1 focus:placeholder:opacity-0 placeholder:text-[#5C635A]'
+ 
+            // className="bg-transparent py-2 px-4 text-xl w-full placeholder:text-white placeholder:text-xl focus:placeholder:opacity-0"
+            
+             placeholder='Enter your email'  />
+       
            </div>
           <div className='mb-[14px]'>
           <p className='mb-2'>Password 
          
           </p>
-          
-          <input type="text" placeholder='Enter your password' className='w-full px-4 py-2 md:py-3 rounded-lg border border-1' /> <FaRegEyeSlash />
+         <div className='relative'>
+           
+         <input type="text" placeholder='Enter your password' className='w-full px-4 py-2 md:py-3 rounded-lg border border-1 placeholder:text-[#5C635A] focus:placeholder:opacity-0' /> <FaRegEyeSlash className='absolute top-1/3 right-0 mr-2 text-[#5C635A] cursor-pointer ' />
+         </div>
           </div>
             <div className='flex justify-between mb-[28px] md:mb-[64px]'>
            <div className='flex items-center'>
            <input type="checkbox" className='w-4 h-4' />
            <p className='ml-[10px] text-[14px] text-[#5C635A]'>Remember me</p>
            </div>
-                <p className= 'text-[#156BCA] underline text-[14px] font-medium leading-[16px] '>Forget password?</p>
+                <p className= 'text-[#156BCA] underline text-[14px] font-medium leading-[16px] cursor-pointer'>Forget password?</p>
             </div>
             </div>
            <div className='text-center'>
            <button className=' w-[271px] h-[54px] rounded-xl font-semibold text-lg text-[#FFFFFF] bg-[#156BCA] mb-[16px]'>Sign In</button>
            </div>
             <div>
-            <p className='text-center'> Don't Have an Account?<span className='underline text-[#156BCA] '> Create Account</span></p>
+            <p className='text-center'> Don't Have an Account?<span className='underline text-[#156BCA] cursor-pointer'> Create Account</span></p>
             </div>
           </div>
           </div>
