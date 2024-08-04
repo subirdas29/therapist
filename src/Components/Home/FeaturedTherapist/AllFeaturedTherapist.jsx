@@ -11,7 +11,7 @@ const AllFeaturedTherapist = ({therapist}) => {
 
 
   return (
-    <div className='border rounded-xl w-full'>
+    <div className='border rounded-xl w-full h-fit'>
 
         <div className='p-[10px]'>
             <img  src={photo} className='w-full' alt="" />
