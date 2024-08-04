@@ -34,7 +34,7 @@ const Login = () => {
            <span className='text-[18px] font-semibold'>Sign In</span> <span className='text-[18px] font-medium'> to view all the <br /> massage therapists</span>
            </p>
            </div>
-          <div className='pt-2 pb-6 bg-white rounded-t-3xl'>
+          <div className='pt-2 pb-6 bg-white rounded-t-badge'>
           <div className='mt-[25px] mb-[40px]'>
            <p className='font-semibold text-3xl md:text-left text-center'>Log In To Your Account</p>
            <p className='text-[14px] md:text-[16px] md:text-left text-center text-[#5C635A] leading-[35px] md:leading-[50px]'>Welcome Back! Select a method to log in:</p>
@@ -106,8 +106,8 @@ const Login = () => {
         <div className='w-3/5 relative rounded-lg hidden md:block' >
       
 
-        <div className='bg-cover w-full  h-screen rounded-lg flex items-center justify-center ' style={{backgroundImage:`url(${logsignbg})`}}>
-        <div className=' rounded-lg opacity-70 bg-[#152A16] flex justify-center items-center p-4 mx-3 lg:w-[341px] text-sm md:text-xl lg:text-[22px] leading-[35px] h-[143px]'>
+        <div className='bg-cover w-full  h-screen rounded-2xl flex items-center justify-center ' style={{backgroundImage:`url(${logsignbg})`}}>
+        <div className=' rounded-2xl opacity-70 bg-[#152A16] flex justify-center items-center p-4 mx-3 lg:w-[341px] text-sm md:text-xl lg:text-[22px] leading-[35px] h-[143px]'>
             <p className='text-opacity-100'><span className='text-[#358eee]'>Sign In</span > <span className='text-[#FFFFFF]'>
             to view all the <br />massage therapists</span></p>
         </div>

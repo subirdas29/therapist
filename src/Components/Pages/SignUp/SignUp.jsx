@@ -30,7 +30,7 @@ const SignUp = () => {
            <span className='text-[18px] font-semibold'>Create Account</span> <br /><span className='text-[18px] font-medium'> Fill in Your Information</span>
            </p>
            </div>
-          <div className='pt-2 pb-6 bg-white rounded-t-3xl'>
+          <div className='pt-2 pb-6 bg-white rounded-t-badge'>
           <div className='mt-[25px] mb-[30px]'>
            <p className='font-semibold text-3xl md:text-left text-center'>Sign In <span className="hidden md:inline">To Your Account</span></p>
            <p className='text-[14px] md:text-[16px] md:text-left text-center text-[#5C635A]  md:leading-[28px] mt-4 hidden md:block'>Welcome Back! By click the sign up button, you`re agree to Zenitood Terms and Service and acknlowledge the <br /><span className="cursor-pointer underline text-[#4285F3]">Privacy and Policy</span></p>
@@ -108,8 +108,8 @@ const SignUp = () => {
         <div className='w-3/5 relative rounded-lg hidden md:block' >
       
 
-        <div className='bg-cover w-full  h-screen rounded-lg flex items-center justify-center ' style={{backgroundImage:`url(${logsignbg})`}}>
-        <div className=' rounded-lg opacity-70 bg-[#152A16] flex justify-center items-center p-4 mx-3 lg:w-[341px] text-sm md:text-xl lg:text-[22px] leading-[35px] h-[143px]'>
+        <div className='bg-cover w-full  h-screen rounded-2xl flex items-center justify-center ' style={{backgroundImage:`url(${logsignbg})`}}>
+        <div className=' rounded-2xl  opacity-70 bg-[#152A16] flex justify-center items-center p-4 mx-3 lg:w-[341px] text-sm md:text-xl lg:text-[22px] leading-[35px] h-[143px]'>
             <p className='text-opacity-100 text-center'><span className='text-[#358eee]'>Create Account</span >  <br /><span className='text-[#FFFFFF]'>
             Fill in Your Information</span></p>
         </div>
