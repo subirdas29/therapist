@@ -6,12 +6,9 @@ import google from '../../../assets/loginandsignup-bg/icon/google.ico'
 import facebook from '../../../assets/loginandsignup-bg/icon/facebook.svg'
 import iphonebg from '../../../assets/loginandsignup-bg/iphone-version/iPhone 14 & 15 Pro Max.png'
 
-
-
-
-const Login = () => {
+const SignUp = () => {
   return (
-   <div >
+    <div >
    
      <div className='relative ' >
             <img className='block h-screen md:hidden w-full' src={iphonebg} alt="" />
@@ -36,8 +33,8 @@ const Login = () => {
            </div>
           <div className='pt-2 pb-6 bg-white rounded-t-3xl'>
           <div className='mt-[25px] mb-[40px]'>
-           <p className='font-semibold text-3xl md:text-left text-center'>Log In To Your Account</p>
-           <p className='text-[14px] md:text-[16px] md:text-left text-center text-[#5C635A]  md:leading-[50px]'>Welcome Back! Select a method to log in:</p>
+           <p className='font-semibold text-3xl md:text-left text-center'>Sign In To Your Account</p>
+           <p className='text-[14px] md:text-[16px] md:text-left text-center text-[#5C635A]  md:leading-[28px]'>Welcome Back! By click the sign up button, you`re agree to Zenitood Terms and Service and acknlowledge the <br /><span className="cursor-pointer underline text-[#4285F3]">Privacy and Policy</span></p>
            </div>
            <div className='flex justify-center md:justify-between '>
            <button className='rounded-lg px-6 md:px-8 lg:px-[54px] py-3 bg-gradient-to-r from-[#E4E4E4] to-[#FFFFFF] drop-shadow-lg flex justify-center items-center mr-10 md:mr-4' > <img className='w-7 h-7' src={google} alt="" /><span>Google</span></button>
@@ -110,4 +107,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default SignUp

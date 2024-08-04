@@ -1,6 +1,7 @@
 
 import './App.css'
 import Login from './Components/Pages/Login/Login'
+import SignUp from './Components/Pages/SignUp/SignUp'
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
   return (
     <>
    
-      <Login></Login>
+      {/* <Login></Login> */}
+      <SignUp></SignUp>
 
     </>
   )
