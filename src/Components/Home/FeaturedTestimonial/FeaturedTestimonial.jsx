@@ -6,9 +6,9 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const FeaturedTestimonial = () => {
   return (
-    <div className='grid col-span-2'>
+    <div className='grid col-span-4 lg:col-span-2'>
         <h1 className='mx-[30px] mt-[30px] mb-[18px] font-medium text-lg'>Featured Testimonial</h1>
-      <div className='bg-[#FFFFFF] mx-[30px] p-[30px] rounded-xl'>
+      <div className='bg-[#FFFFFF] md:mx-[30px] p-[30px] rounded-xl'>
       <div className='flex items-center border mb-[20px] rounded-xl'>
       <div >
       <img src={t1} className='p-[10px] max-w-fit' alt="" />
