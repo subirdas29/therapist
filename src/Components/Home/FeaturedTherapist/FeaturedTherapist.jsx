@@ -16,7 +16,7 @@ const FeaturedTherapist = () => {
   return (
    <div>
     <h1 className='mx-[30px] mt-[30px] mb-[18px] font-medium text-lg'>Featured Therapist</h1>
-     <div className='bg-[#FFFFFF] m-[30px] rounded-xl'>
+     <div className='bg-[#FFFFFF] mx-[30px] rounded-xl'>
       
       <div className='flex gap-6 rounded-xl  p-[30px]'>
       <div className='flex items-center '><FaAngleLeft className='text-4xl bg-[#D4E9FF] text-[#152A16]  rounded-full p-2 ' /></div>
