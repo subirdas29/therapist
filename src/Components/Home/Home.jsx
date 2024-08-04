@@ -5,6 +5,7 @@ import Dashboard from "./Dashboard/Dashboard"
 import FeaturedTestimonial from "./FeaturedTestimonial/FeaturedTestimonial"
 import FeaturedTherapist from "./FeaturedTherapist/FeaturedTherapist"
 import Navbar from "./Navbar/Navbar"
+import PopularCity from "./PopularCity/PopularCity"
 
 const Home = () => {
 
@@ -16,7 +17,10 @@ const Home = () => {
       <Navbar></Navbar>
       <CityState></CityState>
       <FeaturedTherapist></FeaturedTherapist>
-      <FeaturedTestimonial className="col-span-2"></FeaturedTestimonial>
+      <div className="grid grid-cols-4 mb-[30px]">
+      <FeaturedTestimonial ></FeaturedTestimonial>
+      <PopularCity ></PopularCity>
+      </div>
       </div>
      </div>
 

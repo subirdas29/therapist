@@ -8,7 +8,7 @@ import { FaLocationDot } from "react-icons/fa6";
 const AllFeaturedTherapist = ({therapist}) => {
 
     const {photo,name,location,companyName}= therapist
-    console.log(therapist)
+
 
   return (
     <div className='border rounded-xl w-full'>

@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+     "city01": "Atlanta, GA",
+     "city02":"Indianapolis, IN",
+     "city03": "Philadelphia, PA"
+    },
+    {
+      "id": 2,
+     "city01": "Boston, MA",
+     "city02":"Jacksonville, FL",
+     "city03": "Queens, NY"
+    },
+    {
+      "id": 3,
+     "city01": "Chicago, IL",
+     "city02":"Kansas City, MO",
+     "city03": "Raleigh, NC"
+    },
+    {
+      "id": 4,
+     "city01": "Chicago, IL",
+     "city02":"Los Angeles, CA",
+     "city03": "San Antonio, TX"
+    },
+    {
+      "id": 5,
+     "city01": "El Paso, TX",
+     "city02":"Miami, FL",
+     "city03": "Tucson, AZ"
+    },
+    {
+      "id": 6,
+     "city01": "Fresno, CA",
+     "city02":"Nashville, TN",
+     "city03": "Upland, CA"
+    },
+    {
+      "id": 7,
+     "city01": "Houston, TX",
+     "city02":"Oklahoma City, OK",
+     "city03": "Washington, D.C."
+    }
+   
+  ]
