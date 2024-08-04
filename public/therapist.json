@@ -2,30 +2,30 @@
       {
         "id": 1,
         "photo": "https://i.ibb.co/Fbh615g/p1.png",
-        "name": "John Doe",
-        "location": "New York, USA",
-        "companyName": "TechCorp"
+        "name": "Alexander Cort",
+        "location": "123 Elm Street, New York",
+        "companyName": "Mobile & In-Studio"
       },
       {
         "id": 2,
         "photo": "https://i.ibb.co/Vp23wz3/p2.png",
-        "name": "Jane Smith",
-        "location": "London, UK",
-        "companyName": "Innovate Ltd"
+        "name": "Michael Smith",
+        "location": "789 Maple Drive, NY",
+        "companyName": "Mobile & In-Studio"
       },
       {
         "id": 3,
         "photo": "https://i.ibb.co/XLXQNNm/p3.png",
-        "name": "Robert Brown",
-        "location": "Sydney, Australia",
-        "companyName": "AussieTech"
+        "name": "David Martinez",
+        "location": "Pine Street, San Fran",
+        "companyName": "Mobile & In-Studio"
       },
       {
         "id": 4,
         "photo": "https://i.ibb.co/ydFXNBX/p4.png",
-        "name": "Emily Davis",
-        "location": "Toronto, Canada",
-        "companyName": "MapleSoft"
+        "name": "Jennifer Lee",
+        "location": "567 Cedar Lane, Miami",
+        "companyName": "Mobile & In-Studio"
       }
     ]
   
