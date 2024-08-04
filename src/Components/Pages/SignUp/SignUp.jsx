@@ -25,15 +25,15 @@ const SignUp = () => {
         <div className='  absolute bottom-0 md:static  w-full md:w-2/5 md:mr-16 lg:mr-24'>
        
            <div>
-           <h1 className='text-[30px] md:text-[40px]  text-[#4285F3] font-poorrichard text-center md:text-left '>LOGO</h1>
+           <h1 className='text-[40px]  text-[#4285F3] font-poorrichard text-center md:text-left '>LOGO</h1>
            <p className='text-[#FFFFFF] text-center mb-8 md:hidden '>
-           <span className='text-[14px] font-semibold'>Sign In</span> <span className='text-[14px] font-medium'> to view all the <br /> massage therapists</span>
+           <span className='text-[18px] font-semibold'>Create Account</span> <br /><span className='text-[18px] font-medium'> Fill in Your Information</span>
            </p>
            </div>
           <div className='pt-2 pb-6 bg-white rounded-t-3xl'>
           <div className='mt-[25px] mb-[30px]'>
-           <p className='font-semibold text-3xl md:text-left text-center'>Sign In To Your Account</p>
-           <p className='text-[14px] md:text-[16px] md:text-left text-center text-[#5C635A]  md:leading-[28px] mt-4'>Welcome Back! By click the sign up button, you`re agree to Zenitood Terms and Service and acknlowledge the <br /><span className="cursor-pointer underline text-[#4285F3]">Privacy and Policy</span></p>
+           <p className='font-semibold text-3xl md:text-left text-center'>Sign In <span className="hidden md:inline">To Your Account</span></p>
+           <p className='text-[14px] md:text-[16px] md:text-left text-center text-[#5C635A]  md:leading-[28px] mt-4 hidden md:block'>Welcome Back! By click the sign up button, you`re agree to Zenitood Terms and Service and acknlowledge the <br /><span className="cursor-pointer underline text-[#4285F3]">Privacy and Policy</span></p>
            </div>
          
           <div className='mx-4 md:mx-0'>

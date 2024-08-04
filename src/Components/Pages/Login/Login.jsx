@@ -11,10 +11,10 @@ import iphonebg from '../../../assets/loginandsignup-bg/iphone-version/iPhone 14
 
 const Login = () => {
   return (
-   <div >
+   <div className="relative min-h-[600px]" >
    
      <div className='relative ' >
-            <img className='block h-screen md:hidden w-full' src={iphonebg} alt="" />
+            <img className='block min-h-screen md:hidden w-full' src={iphonebg} alt="" />
 
             
             
@@ -29,15 +29,15 @@ const Login = () => {
         <div className='  absolute bottom-0 md:static  w-full md:w-2/5 md:mr-16 lg:mr-24'>
        
            <div>
-           <h1 className='text-[30px] md:text-[40px]  text-[#4285F3] font-poorrichard text-center md:text-left '>LOGO</h1>
-           <p className='text-[#FFFFFF] text-center mb-8 md:hidden '>
-           <span className='text-[14px] font-semibold'>Sign In</span> <span className='text-[14px] font-medium'> to view all the <br /> massage therapists</span>
+           <h1 className='text-[40px]  text-[#4285F3] font-poorrichard text-center md:text-left '>LOGO</h1>
+           <p className='text-[#FFFFFF] text-center mb-12 md:hidden '>
+           <span className='text-[18px] font-semibold'>Sign In</span> <span className='text-[18px] font-medium'> to view all the <br /> massage therapists</span>
            </p>
            </div>
           <div className='pt-2 pb-6 bg-white rounded-t-3xl'>
           <div className='mt-[25px] mb-[40px]'>
            <p className='font-semibold text-3xl md:text-left text-center'>Log In To Your Account</p>
-           <p className='text-[14px] md:text-[16px] md:text-left text-center text-[#5C635A]  md:leading-[50px]'>Welcome Back! Select a method to log in:</p>
+           <p className='text-[14px] md:text-[16px] md:text-left text-center text-[#5C635A] leading-[35px] md:leading-[50px]'>Welcome Back! Select a method to log in:</p>
            </div>
           
           {/* Google & Facebook button */}
