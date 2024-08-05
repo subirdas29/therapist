@@ -1,10 +1,24 @@
 // import React from 'react'
-import { FaRegEyeSlash } from "react-icons/fa6";;
+
+
+import { FaRegEyeSlash } from "react-icons/fa6";
 import logsignbg from'../../../assets/loginandsignup-bg/log-sign-bg.png';
 
 import iphonebg from '../../../assets/loginandsignup-bg/iphone-version/iPhone 14 & 15 Pro Max.png'
 
+import { NavLink } from "react-router-dom";
+
 const StartSignUp = () => {
+
+  const handlesignup = e =>{
+
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const confirmpassword = e.target.confirmpassword.value;
+    console.log(name,email,password,confirmpassword);
+  }
   return (
     <div className="relative">
         <div>
@@ -35,12 +49,13 @@ const StartSignUp = () => {
          
           <div className='mx-4 md:mx-0'>
        
-            <div >
+           <form onSubmit={()=>handlesignup}>
+           <div >
             {/* Name */}
             <div className='mb-4'>
            <p className='mb-2'>Name</p>
        
-          <input type="text" name="" id=""  
+          <input type="text" name="name" id=""  
            
             className='bg-transparent w-full px-4 py-2 md:py-3 rounded-lg border border-1 focus:placeholder:opacity-0 placeholder:text-[#5C635A]'placeholder='@username'  />
        
@@ -51,7 +66,7 @@ const StartSignUp = () => {
            <div className='mb-4'>
            <p className='mb-2'>Email</p>
        
-          <input type="text" name="" id=""  
+          <input type="email" name="email" id=""  
            
             className='bg-transparent w-full px-4 py-2 md:py-3 rounded-lg border border-1 focus:placeholder:opacity-0 placeholder:text-[#5C635A]'placeholder='Enter your email'  />
        
@@ -63,7 +78,7 @@ const StartSignUp = () => {
           <p className='mb-2'>Password </p>
          <div className='relative'>
            
-         <input type="text" placeholder='Enter your password' className='w-full px-4 py-2 md:py-3 rounded-lg border border-1 placeholder:text-[#5C635A] focus:placeholder:opacity-0' /> <FaRegEyeSlash className='absolute top-1/3 right-0 mr-2 text-[#5C635A] cursor-pointer ' />
+         <input type="password" name="password" placeholder='Enter your password' className='w-full px-4 py-2 md:py-3 rounded-lg border border-1 placeholder:text-[#5C635A] focus:placeholder:opacity-0' /> <FaRegEyeSlash className='absolute top-1/3 right-0 mr-2 text-[#5C635A] cursor-pointer ' />
          </div>
           </div>
 
@@ -73,7 +88,7 @@ const StartSignUp = () => {
           <p className='mb-2'>Re-type Password </p>
          <div className='relative'>
            
-         <input type="text" placeholder='Enter your password' className='w-full px-4 py-2 md:py-3 rounded-lg border border-1 placeholder:text-[#5C635A] focus:placeholder:opacity-0' /> <FaRegEyeSlash className='absolute top-1/3 right-0 mr-2 text-[#5C635A] cursor-pointer ' />
+         <input type="password" name="confirmpassword" placeholder='Enter your password' className='w-full px-4 py-2 md:py-3 rounded-lg border border-1 placeholder:text-[#5C635A] focus:placeholder:opacity-0' /> <FaRegEyeSlash className='absolute top-1/3 right-0 mr-2 text-[#5C635A] cursor-pointer ' />
          </div>
           </div>
 
@@ -91,10 +106,11 @@ const StartSignUp = () => {
           <div className='text-center'>
            <button className=' w-[271px] h-[54px] rounded-xl font-semibold text-lg text-[#FFFFFF] bg-[#156BCA] mb-[16px]'>Sign Up</button>
            </div>
+           </form>
 
            {/* Login section */}
             <div>
-            <p className='text-center'> Already Have an Account?<span className='underline text-[#156BCA] cursor-pointer'> Log in</span></p>
+            <p className='text-center'> Already Have an Account?<NavLink to='/login' className='underline text-[#156BCA] cursor-pointer'> Log in</NavLink></p>
             </div>
           </div>
           </div>
@@ -129,5 +145,6 @@ const StartSignUp = () => {
     </div>
   )
 }
+
 
 export default StartSignUp

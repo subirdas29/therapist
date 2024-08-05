@@ -5,11 +5,22 @@ import logsignbg from'../../../assets/loginandsignup-bg/log-sign-bg.png';
 import google from '../../../assets/loginandsignup-bg/icon/google.ico'
 import facebook from '../../../assets/loginandsignup-bg/icon/facebook.svg'
 import iphonebg from '../../../assets/loginandsignup-bg/iphone-version/iPhone 14 & 15 Pro Max.png'
+import { NavLink } from "react-router-dom";
 
 
 
 
 const Login = () => {
+
+
+  const handleLogin = e =>{
+
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email,password);
+  }
+
   return (
    <div className="relative min-h-[600px]" >
    
@@ -49,7 +60,11 @@ const Login = () => {
            {/* Email sign in section */}
 
           <div className='mx-4 md:mx-0'>
-          <div>
+
+
+         <form onSubmit={handleLogin}>
+
+         <div>
           <p className="divider my-[28px] md:my-[32px] text-[14px] text-[#5C635A]">Or Continue with Email</p>
           </div>
             <div >
@@ -59,7 +74,7 @@ const Login = () => {
           <div className='mb-4'>
            <p className='mb-2'>Email</p>
        
-          <input type="text" name="" id=""className='bg-transparent w-full px-4 py-2 md:py-3 rounded-lg border border-1 focus:placeholder:opacity-0 placeholder:text-[#5C635A]'placeholder='Enter your email' />
+          <input type="text" name="email" id=""className='bg-transparent w-full px-4 py-2 md:py-3 rounded-lg border border-1 focus:placeholder:opacity-0 placeholder:text-[#5C635A]'placeholder='Enter your email' />
        
            </div>
 
@@ -71,7 +86,7 @@ const Login = () => {
           </p>
          <div className='relative'>
            
-         <input type="text" placeholder='Enter your password' className='w-full px-4 py-2 md:py-3 rounded-lg border border-1 placeholder:text-[#5C635A] focus:placeholder:opacity-0' /> <FaRegEyeSlash className='absolute top-1/3 right-0 mr-2 text-[#5C635A] cursor-pointer ' />
+         <input type="password" name="password" placeholder='Enter your password' className='w-full px-4 py-2 md:py-3 rounded-lg border border-1 placeholder:text-[#5C635A] focus:placeholder:opacity-0' /> <FaRegEyeSlash className='absolute top-1/3 right-0 mr-2 text-[#5C635A] cursor-pointer ' />
          </div>
           </div>
 
@@ -91,11 +106,12 @@ const Login = () => {
            <div className='text-center'>
            <button className=' w-[271px] h-[54px] rounded-xl font-semibold text-lg text-[#FFFFFF] bg-[#156BCA] mb-[16px]'>Sign In</button>
            </div>
+         </form>
 
           {/* Create Account section */}
 
             <div>
-            <p className='text-center'> Don`t Have an Account?<span className='underline text-[#156BCA] cursor-pointer'> Create Account</span></p>
+            <p className='text-center'> Don`t Have an Account?<NavLink to='/' className='underline text-[#156BCA] cursor-pointer'> Create Account</NavLink></p>
             </div>
           </div>
           </div>
