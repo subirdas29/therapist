@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import dp from '../../../assets/home/nav/dp.png'
 import notification from '../../../assets/home/nav/notification.png'
 import notificationmbl from '../../../assets/home/nav/notification-mbl.png'
 import logout from '../../../assets/home/nav/logout.png'
 import menu from '../../../assets/home/nav/Vector.png'
 import { FaAngleDown } from "react-icons/fa6";
+import { AuthContext } from '../../../providers/AuthProvider'
 const Navbar = () => {
-  return (
+
+  const {user} = useContext(AuthContext)
+    return (
     <div>
      <div className='flex px-[30px] py-[24px] justify-between border-b-2 border-b-[#E7E7E7] bg-[#FFFFFF]'>
      <div >

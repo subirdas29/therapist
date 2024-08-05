@@ -6,19 +6,28 @@ import google from '../../../assets/loginandsignup-bg/icon/google.ico'
 import facebook from '../../../assets/loginandsignup-bg/icon/facebook.svg'
 import iphonebg from '../../../assets/loginandsignup-bg/iphone-version/iPhone 14 & 15 Pro Max.png'
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
+import { useContext } from "react";
 
 
 
 
 const Login = () => {
 
-
+const {signInUser } = useContext(AuthContext)
   const handleLogin = e =>{
 
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email,password);
+
+    signInUser(email, password)
+    .then(result =>{
+      console.log(result.user)
+    })
+    .catch(error=>console.error(error))
+
   }
 
   return (

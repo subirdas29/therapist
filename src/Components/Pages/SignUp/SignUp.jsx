@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaRegEyeSlash } from "react-icons/fa";
 import logsignbg from '../../../assets/loginandsignup-bg/log-sign-bg.png';
 import iphonebg from '../../../assets/loginandsignup-bg/iphone-version/iPhone 14 & 15 Pro Max.png';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const SignUp = () => {
   const [isCreatingAccount, setIsCreatingAccount] = useState(false);
@@ -11,17 +12,31 @@ const SignUp = () => {
     setIsCreatingAccount(true);
   };
 
+  const {createUser} = useContext(AuthContext)
+
   const handleSignup = e => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
     const confirmpassword = e.target.confirmpassword.value;
+
     console.log(name, email, password, confirmpassword);
+
+    createUser (email,password)
+    .then(result =>{
+      console.log(result.user)
+    })
+    .catch(error=>{
+      console.error(error);
+    })
+    
   };
+
 
   return (
     <div className="relative">
+      
       {/* Mobile View */}
       <div className="md:hidden">
         {!isCreatingAccount && (
