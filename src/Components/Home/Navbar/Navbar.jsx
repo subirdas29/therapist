@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import  { useContext } from 'react'
 import dp from '../../../assets/home/nav/dp.png'
 import notification from '../../../assets/home/nav/notification.png'
 import notificationmbl from '../../../assets/home/nav/notification-mbl.png'
@@ -6,9 +6,16 @@ import logout from '../../../assets/home/nav/logout.png'
 import menu from '../../../assets/home/nav/Vector.png'
 import { FaAngleDown } from "react-icons/fa6";
 import { AuthContext } from '../../../providers/AuthProvider'
+import { Link, NavLink } from 'react-router-dom'
 const Navbar = () => {
 
-  const {user} = useContext(AuthContext)
+  const {user,logOut} = useContext(AuthContext)
+
+  const handleLogOut = ()=>{
+    logOut()
+    .then(()=>console.log('user logged out successfully'))
+    .catch(error=>console.error(error))
+  }
     return (
     <div>
      <div className='flex px-[30px] py-[24px] justify-between border-b-2 border-b-[#E7E7E7] bg-[#FFFFFF]'>
@@ -21,7 +28,9 @@ const Navbar = () => {
         <p >sagar soni</p>
         <FaAngleDown />
         </div>
-        <p>sagor@gmail.com</p>
+       {
+        user && <p>{user?.email}</p>
+       }
         </div>
       </div>
       </div>
@@ -29,10 +38,18 @@ const Navbar = () => {
 
       <div className='hidden md:flex items-center divide-x-2'>
         <img className='w-10 h-10 mr-5' src={notification} alt="" />
-        <div className='flex items-center '>
+     {
+
+      user ? <>
+         <button className='flex items-center' onClick={handleLogOut} >
         <p className='ml-5 mr-3 text -[#F15E4A] font-medium text-[15px]'>LogOut</p>
         <img src={logout} alt="" />
-        </div>
+        </button>
+      </>
+      :<NavLink to ='/'></NavLink>
+
+
+     }
       </div>
 
     <div className='flex md:hidden'>

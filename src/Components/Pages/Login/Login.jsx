@@ -5,7 +5,7 @@ import logsignbg from'../../../assets/loginandsignup-bg/log-sign-bg.png';
 import google from '../../../assets/loginandsignup-bg/icon/google.ico'
 import facebook from '../../../assets/loginandsignup-bg/icon/facebook.svg'
 import iphonebg from '../../../assets/loginandsignup-bg/iphone-version/iPhone 14 & 15 Pro Max.png'
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { useContext } from "react";
 
@@ -15,6 +15,9 @@ import { useContext } from "react";
 const Login = () => {
 
 const {signInUser } = useContext(AuthContext)
+
+const navigate = useNavigate();
+
   const handleLogin = e =>{
 
     e.preventDefault();
@@ -25,6 +28,8 @@ const {signInUser } = useContext(AuthContext)
     signInUser(email, password)
     .then(result =>{
       console.log(result.user)
+      e.target.reset();
+      navigate('/home');
     })
     .catch(error=>console.error(error))
 

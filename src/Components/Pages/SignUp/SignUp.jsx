@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { FaRegEyeSlash } from "react-icons/fa";
 import logsignbg from '../../../assets/loginandsignup-bg/log-sign-bg.png';
 import iphonebg from '../../../assets/loginandsignup-bg/iphone-version/iPhone 14 & 15 Pro Max.png';
@@ -13,6 +13,7 @@ const SignUp = () => {
   };
 
   const {createUser} = useContext(AuthContext)
+  const navigate = useNavigate();
 
   const handleSignup = e => {
     e.preventDefault();
@@ -25,7 +26,9 @@ const SignUp = () => {
 
     createUser (email,password)
     .then(result =>{
-      console.log(result.user)
+      console.log(result.user);
+      e.target.reset();
+      navigate('/home');
     })
     .catch(error=>{
       console.error(error);
