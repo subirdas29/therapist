@@ -6,7 +6,7 @@ import logout from '../../../assets/home/nav/logout.png'
 import menu from '../../../assets/home/nav/Vector.png'
 import { FaAngleDown } from "react-icons/fa6";
 import { AuthContext } from '../../../providers/AuthProvider'
-import { Link, NavLink } from 'react-router-dom'
+import {  NavLink } from 'react-router-dom'
 const Navbar = () => {
 
   const {user,logOut} = useContext(AuthContext)
@@ -25,7 +25,9 @@ const Navbar = () => {
       <img src={dp} className='w-[40px] h-[40px]' alt="" />
         <div className='ml-3'>
         <div className='flex items-center justify-between'>
-        <p >sagar soni</p>
+        {
+          user && <p >{user?.displayName}</p>
+        }
         <FaAngleDown />
         </div>
        {

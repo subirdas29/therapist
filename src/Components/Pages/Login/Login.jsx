@@ -14,7 +14,7 @@ import { useContext } from "react";
 
 const Login = () => {
 
-const {signInUser } = useContext(AuthContext)
+const {signInUser,signInWithGoogle,signInWithFacebook } = useContext(AuthContext)
 
 const navigate = useNavigate();
 
@@ -33,6 +33,29 @@ const navigate = useNavigate();
     })
     .catch(error=>console.error(error))
 
+  }
+
+
+  const handleGoogleSignIn=()=>{
+    signInWithGoogle()
+    .then(result =>{
+      console.log(result.user)
+      navigate('/home');
+    })
+    .catch(error=>{
+      console.error(error)
+    })
+  }
+
+  const handleFacebookSignIn=()=>{
+    signInWithFacebook()
+    .then(result =>{
+      console.log(result.user)
+      navigate('/home');
+    })
+    .catch(error=>{
+      console.error(error)
+    })
   }
 
   return (
@@ -67,8 +90,8 @@ const navigate = useNavigate();
           
           {/* Google & Facebook button */}
           <div className='flex justify-center md:justify-between '>
-           <button className='rounded-lg px-6 md:px-8 lg:px-[54px] py-3 bg-gradient-to-r from-[#E4E4E4] to-[#FFFFFF] drop-shadow-lg flex justify-center items-center mr-10 md:mr-4' > <img className='w-7 h-7' src={google} alt="" /><span>Google</span></button>
-           <button className='rounded-lg px-6 md:px-8 lg:px-[54px] py-3 bg-gradient-to-r from-[#298FFF] to-[#0778F5]  text-[#FFFFFF] flex justify-center  items-center '> <img className='w-6 h-6 mr-2' src={facebook} alt="" /><span>Facebook</span></button>
+           <button onClick={handleGoogleSignIn} className='rounded-lg px-6 md:px-8 lg:px-[54px] py-3 bg-gradient-to-r from-[#E4E4E4] to-[#FFFFFF] drop-shadow-lg flex justify-center items-center mr-10 md:mr-4' > <img className='w-7 h-7' src={google} alt="" /><span>Google</span></button>
+           <button onClick={handleFacebookSignIn} className='rounded-lg px-6 md:px-8 lg:px-[54px] py-3 bg-gradient-to-r from-[#298FFF] to-[#0778F5]  text-[#FFFFFF] flex justify-center  items-center '> <img className='w-6 h-6 mr-2' src={facebook} alt="" /><span>Facebook</span></button>
            </div>
 
            {/* Email sign in section */}

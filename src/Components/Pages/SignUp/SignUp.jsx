@@ -12,7 +12,7 @@ const SignUp = () => {
     setIsCreatingAccount(true);
   };
 
-  const {createUser} = useContext(AuthContext)
+  const {createUser,userProfile} = useContext(AuthContext)
   const navigate = useNavigate();
 
   const handleSignup = e => {
@@ -29,12 +29,24 @@ const SignUp = () => {
       console.log(result.user);
       e.target.reset();
       navigate('/home');
+      updateUserProfile(name)
     })
     .catch(error=>{
       console.error(error);
     })
     
   };
+  const updateUserProfile =(name)=>
+    {
+     const profile={
+       displayName:name
+     }
+     userProfile(profile)
+     .then(() => {})
+     .catch((error) => {
+       console.error(error)
+     });
+    }
 
 
   return (
