@@ -13,4 +13,4 @@ https://therapistzone.netlify.app/
 - There have dashboard section, navbar section. In the navbar you can see your username and email,and also show the logOut button, if you click LogOut button then the site redirect you to the logIn page again for LogIn.
  
 - In the mobile version show the dashboard in the menu icon.
-- There have many Multiple section.
+- There have many Multiple section. which are responsive in the mobile version also. There have a carousel section -> In the desktop version it is work when you are click the right-left icon -> In the mobile version it is slide show automatically.
