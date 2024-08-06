@@ -1,3 +1,5 @@
+// import React from 'react';
+import PropTypes from 'prop-types'
 
 import cat from '../../../assets/home/dashboard/Category.png';
 import list from '../../../assets/home/dashboard/listing.png';
@@ -6,13 +8,34 @@ import paper from '../../../assets/home/dashboard/Paper.png';
 import love from '../../../assets/home/dashboard/love.png';
 import info from '../../../assets/home/dashboard/Info.png';
 import set from '../../../assets/home/dashboard/Setting.png';
+import dp from '../../../assets/home/nav/dp.png';
+import logout from '../../../assets/home/nav/logout.png';
+import { FaTimes } from 'react-icons/fa';
 
-const Dashboard = () => {
+const DashboardModal = ({ user, handleLogOut, toggleModal }) => {
   return (
-    <div className='min-h-screen bg-[#FFFFFF] border-r-2 border-b-2 border-r-[#E7E7E7] hidden md:block'>
-      <h1 className='text-[42px] text-[#4285F3] font-poorrichard text-center my-9'>LOGO</h1>
-      <div>
-        <div className='flex items-center py-4 px-6 bg-[#D4E9FF] border-l-4 border-l-[#102C4A]'>
+    <div className='fixed top-0 right-0 w-1/2 h-full  bg-white shadow-2xl drop-shadow-2xl z-50  md:hidden'>
+     <div className='bg-[#156BCA]'>
+     <div className='flex justify-between items-center mb-4'>
+        
+        <FaTimes className='cursor-pointer m-4 text-white' onClick={toggleModal} />
+      </div>
+      <div className='flex flex-col items-end mr-6'>
+        <img src={dp} className='w-[40px] h-[40px] mb-4' alt="" />
+        {user && (
+          <>
+            <p className='text-[#FFFFFF] text-2xl'>{user.displayName}</p>
+            <p className='text-[12px] text-[#1A2634]'>{user.email}</p>
+          </>
+        )}
+        <button className='flex items-center mt-4 pb-8' onClick={handleLogOut}>
+          <p className='text-[#F15E4A] font-medium text-[15px] mr-3'>LogOut</p>
+          <img src={logout} alt="" />
+        </button>
+      </div>
+     </div>
+      <div className='mt-8'>
+        <div className='flex items-center py-4 px-6  bg-[#D4E9FF] border-l-4 border-l-[#102C4A]'>
           <img src={cat} alt="" />
           <p className='ml-3 text-[#152A16]'>Home</p>
         </div>
@@ -46,4 +69,13 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardModal;
+
+DashboardModal.propTypes = {
+  user: PropTypes.object,
+  handleLogOut: PropTypes.function,
+  toggleModal: PropTypes.function,
+}
+
+
+
