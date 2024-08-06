@@ -22,12 +22,14 @@ const AuthProvider = ({children}) => {
       return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    const userProfile=(profile)=>
-      {
-          setLoading(true);
-          return updateProfile(auth.currentUser,profile)
+    const updateUserProfile = (profile) => {
+      if (auth.currentUser) {
+        console.log('Current User:', auth.currentUser);
+        return updateProfile(auth.currentUser, profile);
       }
-  
+      console.error('No user is signed in');
+      return Promise.reject(new Error('No user is signed in'));
+    };
 
     const signInUser =(email, password) => {
       setLoading(true)
@@ -64,7 +66,7 @@ const AuthProvider = ({children}) => {
     const authInfo = {
       loading,
       user,
-      userProfile,
+      updateUserProfile,
       createUser,
       signInUser,
       logOut,

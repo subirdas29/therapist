@@ -16,7 +16,7 @@ const SignUp = () => {
     setIsCreatingAccount(true);
   };
 
-  const { createUser, userProfile } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSignup = (e) => {
@@ -39,27 +39,30 @@ const SignUp = () => {
     setErrorMessage('');
 
     createUser(email, password)
-      .then(result => {
-        console.log(result.user);
-        e.target.reset();
-        navigate('/home');
-        updateUserProfile(name);
-      })
-      .catch(error => {
-        console.error(error);
-      });
+    .then(result => {
+      console.log(result.user);
+      return updateUserProfile({ displayName: name });
+    })
+    .then(() => {
+      e.target.reset();
+      navigate('/home');
+    })
+    .catch(error => {
+      console.error(error);
+      setErrorMessage("Error signing up. Please try again.");
+    });
   };
 
-  const updateUserProfile = (name) => {
-    const profile = {
-      displayName: name
-    };
-    userProfile(profile)
-      .then(() => { })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
+  // const updateUserProfile = (name) => {
+  //   const profile = {
+  //     displayName: name
+  //   };
+  //   userProfile(profile)
+  //     .then(() => { })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // };
 
   return (
     <div className="relative">
@@ -144,7 +147,7 @@ const SignUp = () => {
                         <div className='mb-[14px]'>
                           <p className='mb-2'>Confirm Password </p>
                           <div className='relative'>
-                            <input type={showConfirmPassword ? "text" : "password"} name="confirmpassword" placeholder='Enter your password' className='w-full px-4 py-2 md:py-3 rounded-lg border border-1 placeholder:text-[#5C635A] focus:placeholder:opacity-0' />
+                            <input type={showConfirmPassword ? "text" : "password"} name="confirmpassword" placeholder='Re-type password' className='w-full px-4 py-2 md:py-3 rounded-lg border border-1 placeholder:text-[#5C635A] focus:placeholder:opacity-0' />
                             <div className='absolute top-1/3 right-0 mr-2 text-[#5C635A] cursor-pointer' onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
                               {showConfirmPassword ? <FaRegEye /> : <FaRegEyeSlash />}
                             </div>
@@ -227,7 +230,7 @@ const SignUp = () => {
                     <div className='mb-4'>
                       <label className='block mb-2'>Confirm Password</label>
                       <div className='relative'>
-                        <input type={showConfirmPassword ? "text" : "password"} name="confirmpassword" className='w-full px-4 py-2 border rounded-lg' placeholder='Re-enter your password' />
+                        <input type={showConfirmPassword ? "text" : "password"} name="confirmpassword" className='w-full px-4 py-2 border rounded-lg' placeholder='Re-type password' />
                         <div className='absolute top-2 right-3 text-gray-500 cursor-pointer' onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
                           {showConfirmPassword ? <FaRegEye /> : <FaRegEyeSlash />}
                         </div>

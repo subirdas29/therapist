@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const AllPopularCity = ({city}) => {
 
     const {city01,city02,city03}= city
-    console.log(city)
+ 
   return (
     <div>
       <div>
